@@ -1,0 +1,53 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url(./output.css);
+
+/* google font importing */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+#btnMenu {
+    display: none;
+}
+
+
+@media (max-width:767px) {
+    #btnMenu {
+        display: inline-block;
+
+    }
+    #btnMenu.fa-times{
+        transform: rotate(180deg);
+    }
+
+    .nav {
+        flex-flow: column;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        background: #fff;
+    }
+    .nav.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    .nav a {
+        margin: 1rem 0;
+        font-size: 2rem;
+    }
+    .header {
+        background-color: #fff;
+    }
+}
+
+
+*::-webkit-scrollbar {
+    height: .5rem;
+    width: 1rem;
+}
+*::-webkit-scrollbar-track {
+    border-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--blue);
+}
